@@ -1,0 +1,50 @@
+#head-container {
+    margin-top: 1%;
+}
+
+#head {
+    text-align: center;
+    background-color: #141f3d;
+    color: white;
+    padding: 2%;
+}
+
+.panel-custom {
+    background-color: #141f3d !important;
+    color: white !important;
+}
+
+table {
+    margin: 0 auto;
+}
+
+th {
+    margin: 1% 1% 0 1%;
+    padding: 3% 3% 0 3%;
+    width: 1%;
+}
+
+hr {
+    margin: 1%;
+}
+
+td {
+    margin: 1% 1% 0 1%;
+    padding: 3% 3% 0 3%;
+    width: 1%;
+}
+
+h1 img {
+    width: 5%;
+    padding-bottom: 1%;
+}
+
+.glyphicon-remove {
+    color: darkred;
+    padding-left: 15%;
+}
+
+.form-control:focus {
+    border-color: #141f3d;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px #141f3d;
+}
