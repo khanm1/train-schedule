@@ -18,14 +18,26 @@ var elTimeFreq = $("#time-freq").mask("00");
 
 
 // Initialize Firebase
-var config = {
+/*var config = {
     apiKey: "AIzaSyAHkd1Hn-vBM8PPtFlC-AgkhPl1xsAQ1Fk",
     authDomain: "employee-78d0d.firebaseapp.com",
     databaseURL: "https://employee-78d0d.firebaseio.com",
     projectId: "employee-78d0d",
     storageBucket: "employee-78d0d.appspot.com",
     messagingSenderId: "124813936891"
+  };*/
+
+  // Initialize Firebase
+
+  var config = {
+    apiKey: "AIzaSyBkz9JVd_8b8lagUDON1_vhCa7CjVb6C6U",
+    authDomain: "train-schedue.firebaseapp.com",
+    databaseURL: "https://train-schedue.firebaseio.com",
+    projectId: "train-schedue",
+    storageBucket: "train-schedue.appspot.com",
+    messagingSenderId: "228160960031"
   };
+
 
 firebase.initializeApp(config);
 
