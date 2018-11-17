@@ -1,17 +1,16 @@
 #head-container {
     margin-top: 1%;
 }
-
 #head {
     text-align: center;
     background-color: #141f3d;
     color: white;
-    padding: 2%;
+    padding: 2%; 
 }
-
 .panel-custom {
     background-color: #141f3d !important;
     color: white !important;
+    font-weight: bold; 
 }
 
 table {
@@ -19,9 +18,13 @@ table {
 }
 
 th {
+    font-weight: bold;
     margin: 1% 1% 0 1%;
     padding: 3% 3% 0 3%;
     width: 1%;
+}
+.form-group{
+    font-weight: bold; 
 }
 
 hr {
@@ -33,7 +36,6 @@ td {
     padding: 3% 3% 0 3%;
     width: 1%;
 }
-
 h1 img {
     width: 5%;
     padding-bottom: 1%;

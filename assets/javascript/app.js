@@ -6,14 +6,6 @@ var trainFrequency = "";
 var nextArrival = "";
 var minutesAway = "";
 
-// jQuery global variables
-var elTrain = $("#train-name");
-var elTrainDestination = $("#train-destination");
-
-// form validation for Time using jQuery Mask plugin
-var elTrainTime = $("#train-time").mask("00:00");
-var elTimeFreq = $("#time-freq").mask("00");
-
 // Initialize Firebase
 var config = {
     apiKey: "AIzaSyBkz9JVd_8b8lagUDON1_vhCa7CjVb6C6U",
@@ -28,8 +20,16 @@ firebase.initializeApp(config);
 // Assign the reference to the database to a variable named 'database'
 var database = firebase.database();
 
+// jQuery global variables
+var elTrain = $("#train-name");
+var elTrainDestination = $("#train-destination");
+
+// form validation for Time using jQuery Mask plugin
+var elTrainTime = $("#train-time").mask("00:00");
+var elTimeFreq = $("#time-freq").mask("00");
 database.ref("/trains").on("child_added", function (snapshot) {
-    //  create local variables to store the data from firebase
+
+    // Local variables to store the data from firebase
     var trainDiff = 0;
     var trainRemainder = 0;
     var minutesTillArrival = "";
@@ -51,17 +51,15 @@ database.ref("/trains").on("child_added", function (snapshot) {
         "<td>" + minutesTillArrival + "</td>" +
         "<td>" + nextTrainTime + "  " + "<a><span class='glyphicon glyphicon-remove icon-hidden' aria-hidden='true'></span></a>" + "</td></tr>"
     );
-
     $("span").hide();
-
 });
 
 // function to call the button event, and store the values in the input form
 var storeInputs = function (event) {
-    // prevent from from reseting
+    // prevent from reseting
     event.preventDefault();
 
-    // get & store input values
+    // get and store input values
     trainName = elTrain.val().trim();
     trainDestination = elTrainDestination.val().trim();
     trainTime = moment(elTrainTime.val().trim(), "HH:mm").subtract(1, "years").format("X");
